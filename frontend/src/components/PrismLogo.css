@@ -1,0 +1,19 @@
+.prism-logo img {
+  display: block;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(11, 18, 32, 0.12));
+}
+
+.prism-logo--sm {
+  height: 32px;
+}
+
+.prism-logo--md {
+  height: 46px;
+}
+
+.prism-logo--lg {
+  height: 84px;
+}

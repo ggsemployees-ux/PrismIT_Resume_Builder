@@ -1,0 +1,54 @@
+.bullet-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bullet-editor__row {
+  display: grid;
+  grid-template-columns: 16px 1fr auto;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.bullet-editor__dot {
+  color: var(--text-muted);
+  padding-top: 8px;
+}
+
+.bullet-editor__row textarea {
+  border: 1px solid var(--border-gray);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  resize: vertical;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.bullet-editor__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bullet-editor__bold,
+.bullet-editor__remove {
+  border: 1px solid var(--border-gray);
+  background: var(--canvas-gray);
+  border-radius: 5px;
+  width: 26px;
+  height: 26px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.bullet-editor__bold:hover {
+  color: var(--prism-navy);
+  border-color: var(--prism-blue);
+}
+
+.bullet-editor__remove:hover {
+  color: var(--prism-red);
+  border-color: var(--prism-red);
+}

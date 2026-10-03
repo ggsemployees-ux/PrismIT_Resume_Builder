@@ -1,0 +1,41 @@
+.accordion-section {
+  background: var(--paper-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.accordion-section__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  background: transparent;
+  padding: 16px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--prism-navy);
+  text-align: left;
+}
+
+.accordion-section--open .accordion-section__header {
+  border-bottom: 1px solid var(--border-gray);
+}
+
+.accordion-section__chevron {
+  color: var(--prism-blue-dark);
+  font-size: 18px;
+  line-height: 1;
+}
+
+.accordion-section__body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.accordion-section__continue {
+  align-self: flex-end;
+}

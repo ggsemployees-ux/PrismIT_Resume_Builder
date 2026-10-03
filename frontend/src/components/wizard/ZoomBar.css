@@ -1,0 +1,66 @@
+.zoom-bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(244, 245, 247, 0.92);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid var(--border-gray);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.zoom-bar__controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.zoom-bar__controls button {
+  border: 1px solid var(--border-gray);
+  background: var(--paper-white);
+  border-radius: var(--radius-sm);
+  width: 28px;
+  height: 28px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.zoom-bar__controls button:hover:not(:disabled) {
+  border-color: var(--prism-blue);
+  color: var(--prism-navy);
+}
+
+.zoom-bar__controls button:disabled {
+  opacity: 0.4;
+}
+
+.zoom-bar__pct {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  min-width: 44px;
+  text-align: center;
+}
+
+.zoom-bar__fit {
+  width: auto !important;
+  padding: 0 12px;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  margin-left: 6px;
+}
+
+.zoom-bar__fit--active {
+  border-color: var(--prism-blue) !important;
+  color: var(--prism-navy) !important;
+  background: rgba(79, 182, 247, 0.08) !important;
+}
+
+.zoom-bar__pages {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+}

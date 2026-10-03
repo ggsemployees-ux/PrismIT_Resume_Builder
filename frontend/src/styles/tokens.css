@@ -1,0 +1,38 @@
+:root {
+  /* Core palette, drawn from the Prism IT Hub logo */
+  --prism-navy: #0b1220;       /* "PRISM" wordmark, primary text/heading color */
+  --prism-navy-soft: #1c2740;  /* secondary dark surfaces, hover states on navy */
+  --prism-blue: #4fb6f7;       /* "IT HUB" wordmark, primary interactive accent */
+  --prism-blue-dark: #2f96da;  /* hover/active state of the blue accent */
+
+  /* Prism gradient stops, used sparingly as a single accent (header underline,
+     the export button, section-complete indicators) -- never as a full-page
+     background wash */
+  --prism-red: #f0424a;
+  --prism-orange: #f5893a;
+  --prism-yellow: #f7c948;
+  --prism-green: #22b57a;
+  --prism-teal: #17a598;
+  --prism-purple: #6a4fd6;
+
+  /* Neutrals -- the resume content itself stays on plain neutrals so it
+     reads as an ATS-safe document, not a branded artifact */
+  --paper-white: #ffffff;
+  --canvas-gray: #f4f5f7;
+  --border-gray: #e2e5eb;
+  --text-primary: #14181f;
+  --text-secondary: #5b6472;
+  --text-muted: #8a93a3;
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --shadow-card: 0 1px 2px rgba(11, 18, 32, 0.06), 0 4px 16px rgba(11, 18, 32, 0.06);
+  --shadow-page: 0 8px 30px rgba(11, 18, 32, 0.12);
+
+  --header-height: 64px;
+}

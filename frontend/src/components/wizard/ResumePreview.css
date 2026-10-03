@@ -1,0 +1,206 @@
+.resume-preview {
+  background: var(--canvas-gray);
+  flex: 1;
+  overflow-y: auto;
+  padding: 32px 0 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.resume-preview__measure {
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+  left: -9999px;
+  top: 0;
+}
+
+.resume-preview__pages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  transition: transform 0.15s ease;
+}
+
+.resume-preview__pages--ghost {
+  opacity: 0.55;
+}
+
+.resume-page {
+  background: var(--paper-white);
+  box-shadow: var(--shadow-page);
+  position: relative;
+  flex-shrink: 0;
+  color: #14181f;
+  overflow: hidden;
+}
+
+.resume-page__badge {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--canvas-gray);
+  border-radius: 999px;
+  padding: 3px 10px;
+  letter-spacing: 0.02em;
+}
+
+.pv-block-wrap {
+  margin-bottom: calc(10px * var(--pv-density, 1));
+}
+
+.pv-block-wrap--overflow {
+  outline: 1.5px dashed var(--prism-red);
+  outline-offset: 3px;
+}
+
+.resume-page__sidebar-layout {
+  display: flex;
+  gap: 20px;
+}
+
+.resume-sidebar {
+  flex-shrink: 0;
+  padding: 4px;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+
+.resume-main-col {
+  flex-shrink: 0;
+}
+
+/* --- Font-size hierarchy: driven entirely by the CSS variables set on
+   .resume-page (and mirrored on .resume-preview__measure for accurate
+   height measurement) -- --pv-name-size / --pv-contact-size /
+   --pv-heading-size / --pv-body-size, all derived from the single
+   font-size number the user controls. This is what makes the font-size
+   control actually change the rendered output. --- */
+
+.pv-header h1 {
+  font-size: var(--pv-name-size, 20pt);
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: #14181f;
+}
+
+.pv-contact {
+  font-size: var(--pv-contact-size, 14pt);
+  color: #14181f;
+  margin: 0;
+}
+
+.pv-section-title {
+  font-size: var(--pv-heading-size, 14pt);
+  font-weight: var(--pv-title-weight, 700);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--pv-accent, var(--prism-navy));
+  padding-bottom: 4px;
+  margin-top: 8px;
+}
+
+.resume-page[data-template="compact"] .pv-section-title {
+  margin-top: 6px;
+}
+
+.resume-page[data-template="modern"] .pv-section-title {
+  border-bottom: none;
+  background: color-mix(in srgb, var(--pv-accent) 10%, white);
+  border-left: 3px solid var(--pv-accent);
+  padding: 3px 8px;
+}
+
+.resume-page:not([data-template="modern"]) .pv-section-title {
+  border-bottom: 1.5px solid var(--pv-accent, var(--prism-navy));
+}
+
+.pv-inline-list {
+  font-size: var(--pv-body-size, 12pt);
+  color: #14181f;
+}
+
+/* Career Objective: plain body styling, matching the rest of the resume --
+   no italic, no distinct font style singling it out. */
+.pv-objective {
+  font-size: var(--pv-body-size, 12pt);
+  line-height: 1.55;
+  color: #14181f;
+}
+
+.pv-skill-category {
+  font-size: var(--pv-body-size, 12pt);
+  line-height: 1.5;
+  color: #14181f;
+}
+
+.pv-skill-category strong {
+  color: var(--prism-navy);
+}
+
+/* Job header: company name bold and first, date range same line
+   right-aligned; job title secondary underneath. */
+.pv-job-header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.pv-job-company-name {
+  font-size: var(--pv-heading-size, 14pt);
+  font-weight: var(--pv-title-weight, 700);
+  color: #14181f;
+}
+
+.pv-job-title {
+  font-size: var(--pv-body-size, 12pt);
+  color: #444;
+  margin-top: 1px;
+}
+
+.pv-job-dates {
+  font-size: var(--pv-contact-size, 14pt);
+  color: #666;
+  white-space: nowrap;
+}
+
+/* Education still uses the italic "institution" treatment -- unaffected by
+   the job-header layout swap above, which only applies to work experience. */
+.pv-job-company {
+  font-size: var(--pv-body-size, 12pt);
+  color: #555;
+  font-style: italic;
+}
+
+.pv-edu__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+/* Bullets: explicit solid black, matching Core Technical Skills -- not a
+   muted/gray tone. */
+.pv-bullet {
+  display: flex;
+  gap: 6px;
+  font-size: var(--pv-body-size, 12pt);
+  line-height: 1.5;
+}
+
+.pv-bullet span {
+  color: #14181f;
+}
+
+.pv-bullet p {
+  margin: 0;
+  color: #14181f;
+}
+
+/* Visual gap between each company block in Professional Experience. */
+.pv-company-gap {
+  height: calc(14px * var(--pv-density, 1));
+}

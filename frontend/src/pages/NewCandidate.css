@@ -1,0 +1,31 @@
+.new-candidate {
+  flex: 1;
+  padding: 32px 40px 80px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.step-indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.step-indicator__item {
+  font-weight: 600;
+}
+
+.step-indicator__item.active {
+  color: var(--prism-navy);
+}
+
+.step-indicator__item.done {
+  color: var(--prism-blue-dark);
+}
+
+.step-indicator__sep {
+  color: var(--border-gray);
+}

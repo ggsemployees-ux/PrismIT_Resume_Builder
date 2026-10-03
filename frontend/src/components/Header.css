@@ -1,0 +1,63 @@
+.app-header {
+  height: var(--header-height);
+  background: var(--paper-white);
+  border-bottom: 1px solid var(--border-gray);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.app-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--prism-red),
+    var(--prism-orange),
+    var(--prism-yellow),
+    var(--prism-green),
+    var(--prism-teal),
+    var(--prism-purple)
+  );
+  opacity: 0.9;
+}
+
+.app-header__brand {
+  display: flex;
+  align-items: center;
+}
+
+.app-header__center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.app-header__right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-header__staff {
+  border: 1px solid var(--border-gray);
+  background: var(--canvas-gray);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.app-header__staff:hover {
+  border-color: var(--prism-blue);
+  color: var(--prism-navy);
+}
